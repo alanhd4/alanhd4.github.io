@@ -1,0 +1,122 @@
+/* Variables */
+:root {
+  --main-color: #333;
+  --main-color-dark: white;
+  --muted-color: #8f8f8f;
+  --canvas-color: #f2f2f2;
+  --canvas-color-dark: #121212;
+
+  --input-bg-color: white;
+  --input-bg-color-dark: rgba(255, 255, 255, 0.05);
+  --border-color: rgba(0, 0, 0, 0.12);
+  --hover-color: #4a4a4a;
+  --focus-color: rgba(0, 149, 255, 1);
+
+  --input-size: 1rem;
+  --label-size: 0.875rem;
+}
+
+/* Quick Reset and Border-box */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Base Styles */
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
+}
+h2 {
+  color: var(--muted-color);
+  font-weight: 100;
+}
+/*.light {
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 0.75rem;
+
+  color: var(--main-color);
+  background-color: var(--canvas-color);
+}*/
+.dark {
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0.75rem;
+
+  color: var(--main-color-dark);
+  background-color: var(--canvas-color-dark);
+}
+/* ==================================== */
+
+/* INPUT RESET
+--------------------------------------- */
+input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  font-size: var(--input-size);
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--main-color);
+  background-color: var(--input-bg-color);
+
+  border: 1px solid var(--border-color);
+  border-radius: 0.25rem;
+  padding: 0.5em 0.75em;
+
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+input::placeholder {
+  opacity: 0.56;
+  color: var(--muted-color);
+  width: 800;
+  style="width: 200px;
+
+
+}
+
+/* HOVER & FOCUS
+--------------------------------------- */
+input:hover {
+  border-color: var(--hover-color);
+  width: 400;
+}
+
+input:focus {
+  outline: none;
+  width: 400;
+  border: 1px solid var(--focus-color);
+  box-shadow: 0px 0px 1px 1px var(--focus-color);
+}
+
+/* DARK STYLES
+--------------------------------------- */
+.dark input {
+  color: var(--main-color-dark);
+  width: 400;
+  background-color: var(--input-bg-color-dark);
+}
+
+/* LABEL RESET
+--------------------------------------- */
+label {
+  width: 400;
+  font-size: var(--label-size);
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  display: block;
+  margin-bottom: 0.25em;
+  position: relative;
+}
